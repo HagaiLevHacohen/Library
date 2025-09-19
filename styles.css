@@ -1,0 +1,125 @@
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.container {
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+/* =============== LEFT =============== */
+
+.left {
+    background-color: rgb(128, 128, 128, 0.3);
+    padding: 100px;
+}
+
+.cards {
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-template-columns: repeat(auto-fit, minmax(150px, max-content));
+    gap: 20px;
+}
+
+.card {
+    min-height: 250px;
+    min-width: 150px;
+    padding: 10px;
+    background-color: rgba(212, 15, 124, 0.548);
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px 0px rgba(128, 128, 128, 0.658);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card-buttons button {
+    border: none;
+    background-color: rgba(10, 154, 211, 0.699);
+    border-radius: 5px;
+    width: 70px;
+    height: 40px;
+    box-shadow: 2px 2px 8px 0px rgba(73, 72, 72, 0.836);
+}
+
+.card-buttons button:hover {
+    border: 2px solid gold;
+}
+
+.card-content > h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* =============== RIGHT =============== */
+
+.right {
+    background-color: rgba(0, 60, 255, 0.349);
+    padding: 100px 50px;
+}
+
+.form-container {
+    display: none; /* ← hide initially */
+    background-color: rgba(255, 217, 0, 0.603);
+    width:80%;
+    height: 300px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.status-input {
+    display: flex;
+    gap: 20px;
+}
+
+form > button {
+    border: none;
+    background-color: rgba(10, 154, 211, 0.699);
+    border-radius: 5px;
+    width: 70px;
+    height: 30px;
+    box-shadow: 2px 2px 8px 0px rgba(73, 72, 72, 0.836);
+}
+
+form > button:hover {
+    border: 2px solid rgba(30, 255, 0, 0.726);
+}
+
+
+.right button {
+    border: none;
+    background-color: rgba(233, 78, 7, 0.699);
+    border-radius: 5px;
+    width: 120px;
+    height: 40px;
+    box-shadow: 2px 2px 8px 0px rgba(73, 72, 72, 0.836);    
+}
+
+.right > button:hover {
+    border: 2px solid rgba(240, 29, 39, 0.507);
+}

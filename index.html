@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Library</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h1>Library</h1>
+            <div class="cards">
+                
+            </div>
+        </div>
+
+
+
+        <div class="right">
+            <h1>Add Book</h1>
+            <button type="button">Add a New Book</button>
+            <div class="form-container">
+                <form action="get">
+                    <div class="title-input">
+                        <label for="title">Title: </label>
+                        <input id="title" name="title" type="text">
+                    </div>
+
+                    <div class="author-input">
+                        <label for="author">Author: </label>
+                        <input id="author" name="author" type="text">
+                    </div>
+
+                    <div class="pages-input">
+                        <label for="pages">Pages: </label>
+                        <input id="pages" name="pages" type="number" min="1" max="3000">
+                    </div>
+
+                    
+                    <div class="status-input">
+                        <label>
+                            <input type="radio" name="status" value="yes" />
+                            read
+                        </label>
+
+                        <label>
+                            <input type="radio" name="status" value="no" />
+                            not read
+                        </label>
+                    </div>
+
+                    <button type="submit">Add Book</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
