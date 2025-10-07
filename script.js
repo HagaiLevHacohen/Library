@@ -105,6 +105,24 @@ function displayBooks(){
     }
 }
 
+function validateTitle() {
+    const title = document.querySelector("#title");
+    title.setCustomValidity("");
+    
+    if(title.validity.valueMissing) {
+        title.setCustomValidity("The title must be filled!");
+    }
+}
+
+function validateAuthor() {
+    const author = document.querySelector("#author");
+    author.setCustomValidity("");
+    
+    if(author.validity.valueMissing) {
+        author.setCustomValidity("The author name must be filled!");
+    }
+}
+
 function deleteCard(event) {
     const deleteButton = event.target;
     const card = deleteButton.parentElement.parentElement;
@@ -134,16 +152,27 @@ function changeStatusCard(event) {
 
 function formSubmit(event) {
     event.preventDefault();
+    validateAuthor(); // sets custom message
+    validateTitle(); // sets custom message
+    
+    const titleInput = document.querySelector("#title");
+    const authorInput = document.querySelector("#author");
+
+    // Stop if title is still invalid
+    if (!titleInput.checkValidity()) {
+        titleInput.reportValidity();
+        return;
+    }
+    if (!authorInput.checkValidity()) {
+        authorInput.reportValidity();
+        return;
+    }
+
     const form = event.target;
     const title = form.elements.title.value.trim();
     const author = form.elements.author.value.trim();
     const pages = form.elements.pages.value;
     const status = form.elements.status.value; // from radio buttons
-
-    if (!title || !author || !pages || !status) {
-        alert('Please fill in all fields.');
-        return;
-    }
 
     const read = status === 'yes'; // convert read status to boolean
     addBookToLibrary(title, author, pages, read);

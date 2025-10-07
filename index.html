@@ -22,15 +22,15 @@
             <h1>Add Book</h1>
             <button type="button">Add a New Book</button>
             <div class="form-container">
-                <form action="get">
+                <form action="get" novalidate>
                     <div class="title-input">
                         <label for="title">Title: </label>
-                        <input id="title" name="title" type="text">
+                        <input id="title" name="title" type="text" required>
                     </div>
 
                     <div class="author-input">
                         <label for="author">Author: </label>
-                        <input id="author" name="author" type="text">
+                        <input id="author" name="author" type="text" required>
                     </div>
 
                     <div class="pages-input">
